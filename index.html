@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhi Movie Theatre</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="book">
+        <!-- left side has movie's posters and it's details 
+         while the right side has all other info. -->
+        <div class="left">
+            <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/inside-out-2-et00384010-1705486755.jpg" alt="" >
+            <div class="play">
+              <i class="bi bi-play-fill" id="play"></i>
+            </div>
+            <div class="cont">
+                <h6>Directed By</h6>
+                <p>Kelsey Mann</p>
+                <h6>Starring</h6>
+                <p>Kensington Tallman,
+                    Ananya Panday,
+                    Amy Poehler,
+                    Maya Hawke,
+                    Lewis Black,
+                    Phyllis Smith,
+                    Tony Hale,
+                    Liza Lapira.
+                </p>
+            </div> 
+            <div>
+              <h3>Watch trailer<h3>
+              <iframe width="100%" height="50%" src="https://www.youtube.com/embed/LEjhY15eCx0?si=0zMd_zvIeApOIjCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="right">
+
+          <!-- <video src="https://www.youtube.com/watch?v=LEjhY15eCx0" class="bgVideo"></video> -->
+        
+          <div class="head_time">
+            <h1>Inside Out 2</h1>
+            <div class="time">
+                <h6><i class="bi bi-clock"></i>96 mins</h6>
+                <button>PG-13</button>
+            </div>
+          </div>
+          <div class="date_type">
+            <div class="left_card">
+                <h6 class="title">Friday 5July</h6>
+                <div class="card_month crd">
+                    <li>
+                      <h6>Fri</h6>
+                      <h6 class="date_point">5</h6>  
+                    </li>
+                    <li>
+                        <h6>Sat</h6>
+                        <h6 class="date_point">6</h6>  
+                    </li>
+                    <li>
+                        <h6>Sun</h6>
+                        <h6 class="date_point">7</h6>  
+                    </li>
+                    <li>
+                        <h6>Mon</h6>
+                        <h6 class="date_point">8</h6>  
+                    </li>
+                    <li>
+                        <h6>Tues</h6>
+                        <h6 class="date_point">9</h6>  
+                    </li>
+                    <li>
+                        <h6>Wed</h6>
+                        <h6 class="date_point">10</h6>  
+                    </li>
+                    <li>
+                        <h6>Thurs</h6>
+                        <h6 class="date_point">11</h6>  
+                    </li>
+                    <li>
+                        <h6>Fri</h6>
+                        <h6 class="date_point">12</h6>  
+                    </li>
+                    <li>
+                        <h6>Sat</h6>
+                        <h6 class="date_point">13</h6>  
+                    </li>
+                     <li>
+                          <h6>Sun</h6>
+                          <h6 class="date_point">14</h6>  
+                    </li>
+                    <li>
+                            <h6>Mon</h6>
+                            <h6 class="date_point">15</h6>  
+                    </li>
+                    <li>
+                            <h6>Tues</h6>
+                            <h6 class="date_point">16</h6>  
+                    </li>
+                    <li>
+                            <h6>Wed</h6>
+                            <h6 class="date_point">17</h6>  
+                    </li>
+
+                </div>
+            </div>
+            <div class="right_card crd">
+              <h6 class="title">Show Timings</h6>
+              <div class="card_month crd">
+                <li>
+                   <h6>2D</h6>
+                   <h6>10am</h6>  
+                </li>
+                <li>
+                    <h6>2D</h6>
+                    <h6>11:30am</h6>  
+                </li>
+                <li>
+                    <h6>2D</h6>
+                    <h6>2:45pm</h6>  
+                </li>
+                <li>
+                    <h6>2D</h6>
+                    <h6>4:25pm</h6>  
+                </li>
+                <li>
+                    <h6>2D</h6>
+                    <h6>5pm</h6>  
+                </li>
+                <li>
+                    <h6>2D</h6>
+                    <h6>6:30pm</h6>  
+                </li>
+                <li>
+                    <h6>3D</h6>
+                    <h6 class="h6_active">7pm</h6>  
+                </li>
+                <li>
+                    <h6>2D</h6>
+                    <h6>10:50pm</h6>  
+                </li>
+
+            </div>
+          </div>
+        </div>
+        <div class="screen" id="screen">
+            Screen
+        </div>
+        <div class="chair" id="chair">
+          <div class="row">
+            <span>1</span>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <span>1</span>
+          </div>
+          <div class="row">
+            <span>2</span>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <li class="seat">280</li>
+            <span>2</span>
+          </div>
+
+          <div class="row">
+            <span>3</span>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+
+            
+            <span>3</span>
+          </div>
+
+          <div class="row">
+            <span>4</span>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <li class="seat">300</li>
+            <span>4</span>
+          </div>
+
+          <div class="row">
+            <span>5</span>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            
+            <span>5</span>
+          </div>
+
+          <div class="row">
+            <span>6</span>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <span>6</span>
+          </div>
+
+          <div class="row">
+            <span>7</span>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <span>7</span>
+          </div>
+
+          <div class="row">
+            <span>8</span>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <li class="seat">450</li>
+            <span>8</span>
+          </div>
+          <div class="row">
+            <span>9</span>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+            <li class="seat">600</li>
+
+            <span>9</span>
+          </div>
+          <div class="row">
+            <span>10</span>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            <li class="seat"></li>
+            
+
+           
+            <span>10</span>
+          </div> 
+        </div>
+        
+        <div class="ticket" id="ticket">
+          <button id="prev_ticket" style="display: none;">Previous</button>
+          <button id="next_ticket" style="display: none;">Next</button>
+            <div class="tic">
+              <div class="barcode">
+
+                <div class="card">
+                  <h6>Row J</h6>
+                  <h6>15July</h6>
+                </div>
+                
+                <div class="card">
+                  <h6>Seat 17</h6>
+                  <h6>10:50pm</h6>
+                </div>
+
+              <svg id="barcode"></svg>
+              <h5>NIDHI THEATRE</h5>
+              </div>
+
+              <div class="tic_details">
+                <div class="type">2D</div>
+                <h5 class="pvr">Nidhi<span>Theatre</span></h5>
+                <h1>Inside Out 2</h1>
+
+                <div class="seat_set">
+                  <div class="seat_cr">
+                    <h6>ROW</h6>
+                    <h6>J</h6>
+                  </div>
+                  
+                                 
+                    <div class="seat_cr">
+                      <h6>Seat</h6>
+                      <h6>17</h6>
+                    </div>
+                    
+                      <div class="seat_cr">
+                        <h6>Date</h6>
+                        <h6>15 July</h6>
+                      </div>
+                      
+                        <div class="seat_cr">
+                          <h6>Time</h6>
+                          <label for="movie_time"> Select Time:</label>
+                          <select id="movie_time">
+                            <h6><option value="10:00am">10:00am</option></h6>
+                            <h6><option value="11:30am">11:30am</option></h6>
+                            <h6><option value="02:45pm">02:45pm</option></h6>
+                            <h6><option value="04:25pm">04:25pm</option></h6>
+                            <h6><option value="05:00pm">05:00pm</option></h6>
+                            <h6><option value="06:30pm">06:30pm</option></h6>
+                            <h6><option value="07:00pm">07:00pm</option></h6>
+                            <h6><option value="10:50pm">10:50pm</option></h6>
+                          </select>
+                          <button id="bookTicketBtn">Book Ticket</button>
+                        </div>
+                      </div>
+                <div class="type">2D</div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="details" id="det">
+          <div class="details_chair">
+            
+            <li class="available">Available</li>
+            <li class="booked">Booked</li>
+            <li class="selected">Selected </li>
+            
+          </div>
+        </div>
+        <button class="book_tic" id="book_ticket">
+          <i class="bi bi-arrow-right-square-fill">
+          </i></button>
+         <button class="book_tic"id="back_ticket">
+          <i class="bi bi-arrow-left-square-fill">
+          </i></button> 
+    </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.js" integrity="sha512-wkHtSbhQMx77jh9oKL0AlLBd15fOMoJUowEpAzmSG5q5Pg9oF+XoMLCitFmi7AOhIVhR6T6BsaHJr6ChuXaM/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      JsBarcode("#barcode", "J171510502024");
+    </script>
+</body>
+</html>

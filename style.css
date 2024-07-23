@@ -1,0 +1,585 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+   --color:linear-gradient(0deg, transparent,rgb(184,184,184,.2));
+}
+body{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1f2025;
+}
+.book{
+    height:92%;
+    width:92%;
+    /* border:1px solid white; */
+    /* position: absolute; */
+    display: flex;
+}
+
+.book .left , .right{
+    height:100%;
+    width:80%;
+    position: relative;
+    /* border:1px solid white; */
+}
+.book .left{
+    /* width for left part now becoes 20% and right remains 80% */
+    width:20%; 
+    background: #212225;
+}
+
+.book .left img {
+    /* height: ; */
+    width:100%;
+}
+.book .left .play{
+    position:relative;
+    left:44%;
+    background: #fd6565;
+    width:35px;
+    height:35px;
+    top:-25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:white;
+    box-shadow: 0px 0px 20px rgb(134, 214, 230);
+    transition: .3s linear;
+    cursor:pointer;
+}
+.book .left .play:hover{
+    transform: rotate(360deg);
+}
+.book .left .cont{
+    color:white;
+    /* padding-left:20px;
+    padding-right: 20px; */
+    padding:0 20px;
+}
+.book .left .cont h6{
+    font-size:13px;
+    /* margin-bottom: 10px; */
+}
+.book .left .cont p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.book .right{
+    padding: 10px 40px;
+    background: unset;
+}
+.book .right::before{
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 250px;
+    /* border: 1px solid white; */
+    background: url(https://novouae.gumlet.io/Files//Movie/997x498/inside-out-movie-2.jpg?w=480&dpr=2.6)no-repeat center -30px/cover;
+    border-radius: 30px;
+    z-index: -10;
+}
+/* /after merges opacity with bg */
+.book .right::after{
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 200px;
+     /* border: 1px solid white; */
+     background: linear-gradient(0deg, transparent, #1f2025);
+    border-radius: 30px;
+    z-index: -10;
+} 
+.book .right .head_time{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.book .right .head_time::before{
+   position: absolute;
+   content: '';
+   width: 150px;
+   height: 250px;
+   top: 0;
+   background: linear-gradient(90deg, transparent, #1f2025);
+   right: -25px;
+   z-index: -9;
+}
+.book .right .head_time::after{
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 250px;
+    top: 0;
+    background: linear-gradient(270deg, transparent, #1f2025);
+    left: -25px;
+    z-index: -9;
+ }
+ 
+
+ .book .right .head_time h1{
+color:white;
+font-weight: 600;
+ }
+ .book .right .head_time .time{
+    color:white;
+    display: flex;
+    align-items: center;
+     }
+.book .right .head_time .time h6{
+    font-size: 13px;
+    margin-right:15px;
+}   
+.book .right .head_time .time h6 i{
+    margin-right:5px;
+}    
+.book .right .head_time .time button{
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 2px solid #fd6565;
+    color: white;
+    background: none;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .3s linear;
+    font-weight: 600;
+}    
+.book .right .head_time .time button:hover{
+   background: #fd6565;
+   
+}    
+.book .right .date_type{
+position: relative;
+display: flex;
+align-items: center;
+justify-content:space-between;
+}
+.book .right .date_type .left_card, .right_card{
+    width:45%;
+   /* border:1px solid white; */
+}
+.book .right .date_type::before{
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 190px;
+    left: -15px;
+    top:0;
+    background: linear-gradient(180deg, transparent, #1f2025);
+    z-index:-9;
+}
+.book .right .title {
+    color:white;
+    /* justify-content: right; */
+}
+
+.book .right .left_card .crd {
+    width:100%;
+    overflow-x: auto; 
+    /* which means if content from right side gets too much, this will get converted into scroll */
+    display: flex;
+    align-items: center;
+    margin-top:5px;
+    border-top: 1px solid rgb(184,184, 184, 0.2 );
+    padding: 5px 0;
+    /* justify-content: center; */
+}
+.book .right .right_card .crd {
+    width:100%;
+    overflow-x:auto; 
+    /* which means if content from right side gets too much, this will get converted into scroll */
+    display: flex;
+    align-items: center;
+    margin-top:5px;
+    border-top: 1px solid rgb(184,184, 184, 0.2 );
+    padding: 5px 0;
+    /* justify-content: center; */
+}
+.book .right .crd::-webkit-scrollbar{
+/* display:none; */
+height:3px;
+background: rgb(184,184, 184, 0.5 );
+}
+.book .right .crd::-webkit-scrollbar-thumb{
+    /* display:none; */
+    height:3px;
+    background: rgb(184,184, 184, 0.5 );
+
+}
+.book .right .crd li{
+    list-style: none;
+    color: white;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.book .right .crd li h6:nth-child(2){
+    background: transparent;
+    border-radius: 50%;
+    width:20px;
+    height: 20px;
+    transition: .3s linear;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.book .right .crd li h6:nth-child(2):hover{
+    background: #fd6565;
+}
+.book .right .date_type .right_card li h6:nth-child(2){
+    /* background: transparent; */
+    border-radius: 8px;
+    width: unset;
+    height: unset;
+    padding: 1px 5px 0 5px;
+}
+/* JS Active date class */
+.h6_active{
+    background: #fd6565 !important;
+}
+/* screen start */
+.screen{
+    position: relative;
+    height:100px ;
+    width: 100%;
+    border-top: 3px solid #fd6565;
+    margin-top: 50px;
+    border-radius: 20%;
+    overflow: hidden;
+    box-shadow: inset 0px 10px 20px var(--color);
+    /* display: flex; */
+    text-align: center;
+    padding-top: 15px;
+    color:white;
+    letter-spacing: 5px;
+    font-size: 12px;
+
+    /* DISPLAY NOT TO BE KEPT NONE */
+    /* display: none; */
+}
+.book .right .screen::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    border-radius: 50px;
+    box-shadow:0px 0px 20px rgb(184,184, 184, 0.8 ) ;
+    top:-20px;
+    left:0;
+}
+.book .right .chair{
+  width: 95%;
+  margin: auto;
+
+  /* DISPLAY NOT TO BE KEPT NONE */
+  /* display: none; */
+  /* border: 1px solid white;   */
+}
+.book .right .chair .row{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    /* border: 1px solid white;   */
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .book .right .chair .row li{
+    position: relative;
+    width: 20px;
+    height: 15px;
+    background: rgb(184,184,184,.3);
+    list-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+    font-size: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 7px;
+    color: white;
+  }
+  .book .right .chair .row li::before{
+   content: '';
+   position: absolute;
+   width:100%;
+   height: 5px;
+   background: rgb(184,184, 184, 0.1 );
+   bottom:-8px;
+   border-radius: 10px;
+  }
+  .book .right .chair .row li:hover{
+    background: peru;
+    color: black;
+  }
+  .book .right .chair .row li:nth-child(6){
+    margin-right: 20px;
+  }
+  .book .right .chair .row li:nth-last-child(6){
+    margin-left: 20px;
+  }
+  .book .right .chair .row span{
+    color:white;
+    font-weight: 600;
+    font-size: 11px;
+  }
+  /* js classes */
+  /* for those when seat selected and the seat on selection changes color */
+
+  .book .right .chair .booked{
+    background: #fd6565 !important;
+  }
+  .book .right .chair .selected{
+    background:  greenyellow !important;
+  color:black !important;
+}
+.book .right .details{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    /* display: none; */
+    justify-content: center;
+}
+.book .right .details .details_chair{
+  display:flex;
+  align-items: center;  
+}
+.book .right .details .details_chair li{
+    position: relative;
+    list-style-type: none;
+    border-radius: 5px;
+    transition: .3s linear;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(184,184,184,.3);
+}
+.book .right .details .details_chair li::before{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 15px;
+    background: rgb(184,184,184,.3);
+    border-radius: 5px;
+    left:-30px;
+    transition: .3s linear;
+    top:2px;
+}
+.book .right .details .details_chair li::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 5px;
+    background: rgb(184,184,184,.1);
+    border-radius: 10px;
+    left:-30px;
+    transition: .3s linear;
+    bottom:-8px;
+}
+.book .right .details .details_chair li:nth-child(2)::before{
+    background: #fd6565;
+}
+.book .right .details .details_chair li:nth-child(2)::after{
+    background:#fd6565;
+}
+.book .right .details .details_chair li:nth-child(3)::before{
+    background: greenyellow;
+}
+.book .right .details .details_chair li:nth-child(3)::after{
+    background:greenyellow;
+}
+.book .right .book_tic  {
+    position: absolute;
+    right: 5%;
+    bottom:40px;
+    padding: 8px 9.5px;
+    border-radius: 50%;
+    border:none;
+    outline: none;
+    background: #fd6565;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s linear;
+    display: none;
+
+    /* DISPLAY NOT TO BE KEPT NONE */
+    /* display: none; */
+}
+.book .right .book_tic:hover{
+    color: black;
+}
+.seats-selected .book_tic  {
+    display: inline-block;
+}
+
+.book .right .ticket{
+    width: 100%;
+    height: 75%;
+    border: 1px soid white;
+    margin-top: 20px;
+    overflow-y: auto;
+
+    /* DISPLAY NONE TO BE REMOVED LATER */
+    display: none;
+}
+.book .right .ticket::-webkit-scrollbar{
+   display: none; 
+}
+.book .right .ticket .tic{
+    width: 100%;
+    height: 215px;
+    display: flex;
+    overflow: hidden;
+    margin-top:12px;
+    /* border: 1px soid white; */
+}
+.book .right .ticket .tic .barcode, .tic_details{
+    /* width: 300px;
+    padding: 0 20px;
+    background: white; */
+    width: 100%;
+    height: 100%;
+    /* border: 1px soid white; */
+    position: relative;
+    
+}
+.book .right .ticket .tic .barcode{
+    width: 300px;
+    padding: 0 20px;
+    background: white;
+}
+.book .right .ticket .tic .tic_details{
+    background: url(/images/insideOut2.png)no-repeat center -33px/cover;
+}
+
+.book .right .ticket .tic .barcode .card{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 10px; 
+}
+.book .right .ticket .tic .barcode .card:nth-child(1){
+    margin-top: 16px;
+}
+.book .right .ticket .tic .barcode .card h6{
+    width: 60%;
+    text-align: left;
+    font-weight: 600;
+}
+.book .right .ticket .tic .barcode .card h6:nth-child(1){
+    width: 40%;
+}
+.book .right .ticket .tic .barcode h5{
+    width: 100%;
+     text-align: center;
+    }
+    .book .right .ticket .tic .tic_details .type{
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-weight: 600;
+        color: black;
+}
+.book .right .ticket .tic .tic_details .pvr{
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    font-weight: 600;
+    color: skyblue;
+}
+.book .right .ticket .tic .tic_details .pvr span{
+    color: white;
+}
+.book .right .ticket .tic .tic_details h1{
+    color: black;
+    position: absolute;
+    left: 20px;
+    bottom: 150px;
+}
+.book .right .ticket .tic .tic_details .seat_set{
+    height: 60px;
+    background: linear-gradient(270deg, transparent, rgb(184,184,184,.3));
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    position: absolute;
+    left: 0px;
+    bottom: 80px;
+    width: 100%;
+}
+.book .right .ticket .tic .tic_details .seat_set .seat_cr{
+  width: 100px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;  
+}
+.book .right .ticket .tic .tic_details .seat_set .seat_cr h6:nth-child(1){
+    font-size: 10px;
+    font-weight: 600;
+}
+.book .right .ticket .tic .tic_details .seat_set .seat_cr h6:nth-child(2){
+    font-size: 20px;
+    font-weight: 800;
+}
+nav{
+    width: 90%;
+    height: 70px;
+    margin: auto;
+    background: rgb(184,184, 184, 0.1 );
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+nav a span{
+    color: skyblue;
+}
+.cards{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.cards .card{
+min-width: 130px;
+height: 180px;
+border-radius: 8px;
+margin-right: 10px;
+background: black;
+transition: .3s linear;
+margin-top: 10px;
+}
+.cards .card img{
+    width: 100%;
+    height: 100%;
+
+}
